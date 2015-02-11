@@ -20,7 +20,7 @@ img {
 }
 
 body {
-    background-color: yellow;
+    background-color: white;
 }
 
 .button {
@@ -38,7 +38,7 @@ body {
 	border-radius: 5px;
 	padding: 10px;
 	margin: 10px;
-	background-color: #19E8FF;
+	background-color: lightgray;
 }
 
 .photo {
@@ -52,4 +52,16 @@ h5.inline {
 
 .right-side {
 	float: right;
+}
+
+.quote-text {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.6em;
+    margin: 0 auto;
+    width:80%;
+}
+
+.quote-position {
+    text-align: center;
+    margin-bottom: -0.1em;
 }

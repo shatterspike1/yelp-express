@@ -14,6 +14,12 @@ app.set('view engine', 'jade');
 // set where the static contents are (e.g., css, js)
 app.use(express.static(__dirname + '/public'));
 
+app.get('/', function(req, res){
+    res.render('listRestaurants.jade', {
+        restaurants: restaurants
+    })
+})
+
 app.get('/list/restaurants', function(req, res) {
     res.render('listRestaurants.jade', {
         restaurants: restaurants
@@ -83,6 +89,8 @@ app.get('/view/tip/:business_id/:user_id', function(req, res) {
 // TODO: individual homework
 var plugin = require('./search')
 plugin(app)
+
+require('./mongo')(app)
 
 var server = app.listen(3000, function() {
 
